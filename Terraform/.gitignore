@@ -5,7 +5,7 @@
 
 # Directories
 .terraform/
-
+customVpc/
 # SSH Keys
 *.pem
 
