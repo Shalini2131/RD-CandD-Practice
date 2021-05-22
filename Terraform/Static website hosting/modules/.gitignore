@@ -5,11 +5,10 @@
 
 # Directories
 .terraform/
-
+!outputs.tf
 # SSH Keys
 *.pem
 
 # Ignored vscode files
 .vscode/
 
-outputs.tf
