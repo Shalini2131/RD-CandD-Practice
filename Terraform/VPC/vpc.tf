@@ -6,9 +6,7 @@ resource "aws_vpc" "terraform-vpc" {
   }
 }
 
-output "aws_vpc_id" {
-  value = "${aws_vpc.terraform-vpc.id}"
-}
+
 
 
 
@@ -22,9 +20,7 @@ resource "aws_subnet" "tf-public-subnet_1" {
     Name = "terraform-subnet_1"
   }
 }
-output "aws_subnet_subnet_1" {
-  value = "${aws_subnet.tf-public-subnet_1.id}"
-}
+
 
 resource "aws_subnet" "tf-public-subnet_2" {
   vpc_id     = "${aws_vpc.terraform-vpc.id}"
@@ -35,9 +31,7 @@ resource "aws_subnet" "tf-public-subnet_2" {
     Name = "terraform-subnet_1"
   }
 }
-output "aws_subnet_subnet_2" {
-  value = "${aws_subnet.tf-public-subnet_2.id}"
-}
+
 
 
 resource "aws_subnet" "tf-private-subnet_1" {
@@ -49,9 +43,7 @@ resource "aws_subnet" "tf-private-subnet_1" {
     Name = "terraform-subnet_1"
   }
 }
-output "aws_subnet_subnet_3" {
-  value = "${aws_subnet.tf-private-subnet_1.id}"
-}
+
 
 resource "aws_subnet" "tf-private-subnet_2" {
   vpc_id     = "${aws_vpc.terraform-vpc.id}"
@@ -61,10 +53,6 @@ resource "aws_subnet" "tf-private-subnet_2" {
   tags = {
     Name = "terraform-subnet_1"
   }
-}
-
-output "aws_subnet_subnet_4" {
-  value = "${aws_subnet.tf-private-subnet_2.id}"
 }
 
 #Creating Internet Gateway

@@ -18,6 +18,3 @@ resource "aws_security_group" "terraform_ssh_sg" {
   }
 }
 
-output "aws_security_gr_id" {
-  value = "${aws_security_group.terraform_ssh_sg.id}"
-}
