@@ -1,3 +1,4 @@
+# Creating Cloudfront distribution
 resource "aws_cloudfront_distribution" "demo-distribution" {
   origin {
     domain_name = "${aws_s3_bucket.sh-bucket.bucket_regional_domain_name}"
