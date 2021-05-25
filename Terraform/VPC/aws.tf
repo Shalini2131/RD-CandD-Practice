@@ -9,7 +9,7 @@ resource "aws_instance" "tf_public_instance_1" {
     instance_type = "t2.micro"
     vpc_security_group_ids =  [ "${aws_security_group.terraform_ssh_sg.id}" ]
     subnet_id = "${aws_subnet.tf-public-subnet_1.id}"
-    key_name               = "terraform-demo"
+    key_name               = "demo-key-pair"
     associate_public_ip_address = true
     tags = {
       Name              = "terraform_ec2_1"
@@ -23,7 +23,7 @@ resource "aws_instance" "tf_public_instance_2" {
     instance_type = "t2.micro"
     vpc_security_group_ids =  [ "${aws_security_group.terraform_ssh_sg.id}" ]
     subnet_id = "${aws_subnet.tf-public-subnet_2.id}"
-    key_name               = "terraform-demo"
+    key_name               = "demo-key-pair"
     associate_public_ip_address = true
     tags = {
       Name              = "terraform_ec2_2"
@@ -35,9 +35,9 @@ resource "aws_instance" "tf_public_instance_2" {
 resource "aws_instance" "tf_private_instance_1" {
     ami = "ami-0d5eff06f840b45e9"
     instance_type = "t2.micro"
-    vpc_security_group_ids =  [ "${aws_security_group.terraform_ssh_sg.id}" ]
+    vpc_security_group_ids =  [ "${aws_security_group.nat_ssh_sg.id}" ]
     subnet_id = "${aws_subnet.tf-private-subnet_1.id}"
-    key_name               = "terraform-demo"
+    key_name               = "private-kp"
     associate_public_ip_address = true
     tags = {
       Name              = "terraform_ec2_3"
