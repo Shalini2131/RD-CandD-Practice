@@ -1,3 +1,4 @@
+### Note: The "module" directory is not related to "terrafrom modules".
 ## Output screenshots
 ### Default root
 ![Default root](https://github.com/Shalini2131/RD-CandD-Practice/blob/main/Terraform/Static%20website%20hosting/output_imgs/root.PNG)
